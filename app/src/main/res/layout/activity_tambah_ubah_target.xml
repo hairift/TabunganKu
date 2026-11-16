@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/warna_latar"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/warna_permukaan"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/jarak_sm"
+        android:paddingVertical="@dimen/jarak_sm">
+
+        <ImageButton
+            android:id="@+id/tombol_kembali_form"
+            android:layout_width="@dimen/sentuh_minimum"
+            android:layout_height="@dimen/sentuh_minimum"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/ket_akses_kembali"
+            android:padding="12dp"
+            android:src="@drawable/ic_kembali"
+            app:tint="@color/warna_teks_utama" />
+
+        <TextView
+            android:id="@+id/teks_judul_form"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/jarak_sm"
+            android:layout_weight="1"
+            android:fontFamily="@font/teks_judul"
+            android:text="@string/judul_tambah_target"
+            android:textColor="@color/warna_teks_utama"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/warna_garis_halus" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/jarak_lg"
+        android:paddingTop="@dimen/jarak_lg"
+        android:paddingBottom="40dp"
+        android:scrollbarStyle="outsideOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Pemilih Foto Motivasi -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/plus_jakarta_semibold"
+                android:text="@string/label_foto_motivasi"
+                android:textColor="@color/warna_teks_utama"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/petunjuk_foto_motivasi"
+                android:textColor="@color/warna_teks_sekunder"
+                android:textSize="12sp" />
+
+            <FrameLayout
+                android:id="@+id/wadah_foto_form"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="@dimen/jarak_sm"
+                android:background="@drawable/latar_bingkai_foto"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/pratinjau_foto_form"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/label_foto_motivasi"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_foto_kosong" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/jarak_sm"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tombol_pilih_foto"
+                    style="@style/GayaTombol.Garis"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/tombol_pilih_foto"
+                    app:icon="@drawable/ic_foto"
+                    app:iconTint="@color/warna_primer" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tombol_hapus_foto"
+                    style="@style/GayaTombol.Garis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/jarak_sm"
+                    android:text="@string/tombol_hapus_foto"
+                    android:textColor="@color/warna_galat_teks"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!-- Nama Target -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/jarak_lg"
+                android:fontFamily="@font/plus_jakarta_semibold"
+                android:labelFor="@+id/input_nama_target"
+                android:text="@string/label_nama_target"
+                android:textColor="@color/warna_teks_utama"
+                android:textSize="14sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/wadah_nama_target"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                app:boxBackgroundColor="@color/warna_permukaan"
+                app:boxCornerRadiusBottomEnd="@dimen/radius_tombol"
+                app:boxCornerRadiusBottomStart="@dimen/radius_tombol"
+                app:boxCornerRadiusTopEnd="@dimen/radius_tombol"
+                app:boxCornerRadiusTopStart="@dimen/radius_tombol"
+                app:boxStrokeColor="@color/warna_garis_batas"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_nama_target"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/petunjuk_nama_target"
+                    android:inputType="textCapSentences"
+                    android:maxLength="80"
+                    android:minHeight="@dimen/sentuh_minimum"
+                    android:textColor="@color/warna_teks_utama" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Kategori -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/jarak_md"
+                android:fontFamily="@font/plus_jakarta_semibold"
+                android:labelFor="@+id/input_kategori_target"
+                android:text="@string/label_kategori_target"
+                android:textColor="@color/warna_teks_utama"
+                android:textSize="14sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                app:boxBackgroundColor="@color/warna_permukaan"
+                app:boxCornerRadiusBottomEnd="@dimen/radius_tombol"
+                app:boxCornerRadiusBottomStart="@dimen/radius_tombol"
+                app:boxCornerRadiusTopEnd="@dimen/radius_tombol"
+                app:boxCornerRadiusTopStart="@dimen/radius_tombol"
+                app:boxStrokeColor="@color/warna_garis_batas">
+
+                <AutoCompleteTextView
+                    android:id="@+id/input_kategori_target"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:minHeight="@dimen/sentuh_minimum"
+                    android:textColor="@color/warna_teks_utama" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Nominal Target -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/jarak_md"
+                android:fontFamily="@font/plus_jakarta_semibold"
+                android:labelFor="@+id/input_nominal_target"
+                android:text="@string/label_nominal_target"
+                android:textColor="@color/warna_teks_utama"
+                android:textSize="14sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/wadah_nominal_target"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                app:boxBackgroundColor="@color/warna_permukaan"
+                app:boxCornerRadiusBottomEnd="@dimen/radius_tombol"
+                app:boxCornerRadiusBottomStart="@dimen/radius_tombol"
+                app:boxCornerRadiusTopEnd="@dimen/radius_tombol"
+                app:boxCornerRadiusTopStart="@dimen/radius_tombol"
+                app:boxStrokeColor="@color/warna_garis_batas"
+                app:hintEnabled="false"
+                app:prefixText="Rp ">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_nominal_target"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFeatureSettings="tnum"
+                    android:hint="@string/petunjuk_nominal_target"
+                    android:inputType="number"
+                    android:maxLength="18"
+                    android:minHeight="@dimen/sentuh_minimum"
+                    android:textColor="@color/warna_teks_utama" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Saldo Awal (hanya tampil saat membuat target baru) -->
+            <LinearLayout
+                android:id="@+id/kelompok_saldo_awal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/jarak_md"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/plus_jakarta_semibold"
+                    android:labelFor="@+id/input_saldo_awal"
+                    android:text="@string/label_saldo_awal"
+                    android:textColor="@color/warna_teks_utama"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/wadah_saldo_awal"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    app:boxBackgroundColor="@color/warna_permukaan"
+                    app:boxCornerRadiusBottomEnd="@dimen/radius_tombol"
+                    app:boxCornerRadiusBottomStart="@dimen/radius_tombol"
+                    app:boxCornerRadiusTopEnd="@dimen/radius_tombol"
+                    app:boxCornerRadiusTopStart="@dimen/radius_tombol"
+                    app:boxStrokeColor="@color/warna_garis_batas"
+                    app:hintEnabled="false"
+                    app:prefixText="Rp ">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_saldo_awal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFeatureSettings="tnum"
+                        android:hint="@string/petunjuk_saldo_awal"
+                        android:inputType="number"
+                        android:maxLength="18"
+                        android:minHeight="@dimen/sentuh_minimum"
+                        android:textColor="@color/warna_teks_utama" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!-- Tanggal Target -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/jarak_md"
+                android:fontFamily="@font/plus_jakarta_semibold"
+                android:text="@string/label_tanggal_target"
+                android:textColor="@color/warna_teks_utama"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tombol_pilih_tanggal_target"
+                    style="@style/GayaTombol.Garis"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/petunjuk_tanggal_belum_dipilih"
+                    app:icon="@drawable/ic_kalender"
+                    app:iconTint="@color/warna_primer" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tombol_hapus_tanggal_target"
+                    style="@style/GayaTombol.Garis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/jarak_sm"
+                    android:text="@string/tombol_hapus"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!-- Catatan Motivasi -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/jarak_md"
+                android:fontFamily="@font/plus_jakarta_semibold"
+                android:labelFor="@+id/input_catatan_motivasi"
+                android:text="@string/label_catatan_motivasi"
+                android:textColor="@color/warna_teks_utama"
+                android:textSize="14sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                app:boxBackgroundColor="@color/warna_permukaan"
+                app:boxCornerRadiusBottomEnd="@dimen/radius_tombol"
+                app:boxCornerRadiusBottomStart="@dimen/radius_tombol"
+                app:boxCornerRadiusTopEnd="@dimen/radius_tombol"
+                app:boxCornerRadiusTopStart="@dimen/radius_tombol"
+                app:boxStrokeColor="@color/warna_garis_batas"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_catatan_motivasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|start"
+                    android:hint="@string/petunjuk_catatan_motivasi"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:maxLength="220"
+                    android:minLines="3"
+                    android:textColor="@color/warna_teks_utama" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tombol_simpan_target"
+                style="@style/GayaTombol.Aksen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/jarak_xl"
+                android:text="@string/tombol_simpan_target" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

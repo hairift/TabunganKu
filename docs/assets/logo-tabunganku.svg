@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>Logo Resmi TabunganKu</title>
+  <!-- Bingkai buku tabungan hijau pinus -->
+  <rect x="24" y="24" width="464" height="464" rx="112" fill="#1E4D3B"/>
+  <!-- Garis dalam lembut khas sampul buku -->
+  <rect x="46" y="46" width="420" height="420" rx="92" fill="none" stroke="#2F6A54" stroke-width="4"/>
+
+  <!-- Badan celengan rumah krem gading -->
+  <path d="M162 224 L256 146 L350 224 L350 318 C350 368 310 398 256 398 C202 398 162 368 162 318 Z" fill="#FAF7F2"/>
+
+  <!-- Atap rumah terakota hangat dengan sudut bulat mulus -->
+  <path d="M126 226 L256 122 L386 226" fill="none" stroke="#E08663" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Celah koin celengan -->
+  <rect x="212" y="220" width="88" height="16" rx="8" fill="#1E4D3B"/>
+
+  <!-- Koin terakota dengan tunas pertumbuhan halus -->
+  <circle cx="256" cy="316" r="46" fill="#A94E2D"/>
+  <circle cx="256" cy="316" r="36" fill="none" stroke="#FAF7F2" stroke-width="3.5"/>
+  <path d="M256 339 L256 298" stroke="#FAF7F2" stroke-width="5.5" stroke-linecap="round"/>
+  <path d="M256 320 C239 320 231 306 237 294 C249 294 256 304 256 320 Z" fill="#FAF7F2"/>
+  <path d="M256 312 C273 312 281 298 275 286 C263 286 256 296 256 312 Z" fill="#FAF7F2"/>
+</svg>

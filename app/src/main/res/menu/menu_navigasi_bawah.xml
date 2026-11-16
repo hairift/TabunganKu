@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_beranda"
+        android:icon="@drawable/ic_nav_beranda"
+        android:title="@string/nav_beranda" />
+    <item
+        android:id="@+id/menu_riwayat"
+        android:icon="@drawable/ic_nav_riwayat"
+        android:title="@string/nav_riwayat" />
+    <item
+        android:id="@+id/menu_laporan"
+        android:icon="@drawable/ic_nav_laporan"
+        android:title="@string/nav_laporan" />
+    <item
+        android:id="@+id/menu_pengaturan"
+        android:icon="@drawable/ic_nav_pengaturan"
+        android:title="@string/nav_pengaturan" />
+</menu>

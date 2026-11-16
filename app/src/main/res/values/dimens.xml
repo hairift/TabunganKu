@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="jarak_xs">4dp</dimen>
+    <dimen name="jarak_sm">8dp</dimen>
+    <dimen name="jarak_md">12dp</dimen>
+    <dimen name="jarak_lg">16dp</dimen>
+    <dimen name="jarak_xl">20dp</dimen>
+    <dimen name="jarak_xxl">24dp</dimen>
+
+    <!-- Variasi sudut terukur (R-11): kartu 16dp, kontrol/input 12dp, lembar 24dp -->
+    <dimen name="radius_kartu">16dp</dimen>
+    <dimen name="radius_tombol">12dp</dimen>
+    <dimen name="radius_chip">10dp</dimen>
+    <dimen name="radius_lembar">24dp</dimen>
+
+    <!-- Target sentuh minimum ramah jari (R-03) -->
+    <dimen name="sentuh_minimum">48dp</dimen>
+</resources>

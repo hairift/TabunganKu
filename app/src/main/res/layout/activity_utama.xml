@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/akar_utama"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/warna_latar"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/wadah_fragmen"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/warna_garis_halus" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigasi_bawah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/warna_permukaan"
+        app:elevation="0dp"
+        app:itemActiveIndicatorStyle="@style/Widget.Material3.BottomNavigationView.ActiveIndicator"
+        app:itemIconTint="@color/warna_ikon_nav"
+        app:itemTextColor="@color/warna_ikon_nav"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_navigasi_bawah" />
+
+</LinearLayout>

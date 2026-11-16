@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/kartu_target"
+    style="@style/GayaKartu.Utama"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="4dp"
+    android:layout_marginBottom="@dimen/jarak_md"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Foto motivasi impian pengguna -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="164dp">
+
+            <ImageView
+                android:id="@+id/gambar_motivasi_target"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/label_foto_motivasi"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_foto_kosong" />
+
+            <!-- Penanda kategori & status dilindungi scrim gelap agar kontras selalu >= 4.5:1 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|start"
+                android:layout_margin="@dimen/jarak_md"
+                android:background="@drawable/latar_foto_scrim"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp">
+
+                <TextView
+                    android:id="@+id/teks_kategori_kartu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/plus_jakarta_semibold"
+                    android:textColor="@color/warna_teks_di_scrim"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/teks_status_kartu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:layout_margin="@dimen/jarak_md"
+                android:background="@drawable/latar_foto_scrim"
+                android:fontFamily="@font/plus_jakarta_semibold"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:textColor="@color/warna_teks_di_scrim"
+                android:textSize="12sp" />
+        </FrameLayout>
+
+        <!-- Konten kartu di atas permukaan gading padat agar keterbacaan terjamin -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/jarak_lg">
+
+            <TextView
+                android:id="@+id/teks_nama_target_kartu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/teks_judul"
+                android:maxLines="2"
+                android:textColor="@color/warna_teks_utama"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/teks_motivasi_kartu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/warna_teks_sekunder"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/jarak_md"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/teks_saldo_kartu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/plus_jakarta_bold"
+                        android:fontFeatureSettings="tnum"
+                        android:textColor="@color/warna_teks_utama"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/teks_target_nominal_kartu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFeatureSettings="tnum"
+                        android:textColor="@color/warna_teks_sekunder"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/teks_persen_kartu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/plus_jakarta_bold"
+                    android:fontFeatureSettings="tnum"
+                    android:textColor="@color/warna_primer"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progres_kartu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/jarak_sm"
+                android:max="100"
+                app:indicatorColor="@color/warna_primer"
+                app:trackColor="@color/warna_permukaan_sekunder"
+                app:trackCornerRadius="4dp"
+                app:trackThickness="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/jarak_md"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/teks_sisa_waktu_kartu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/jarak_sm"
+                    android:layout_weight="1"
+                    android:fontFeatureSettings="tnum"
+                    android:textColor="@color/warna_teks_sekunder"
+                    android:textSize="12sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tombol_setor_kartu"
+                    style="@style/GayaTombol.Garis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="92dp"
+                    android:minHeight="@dimen/sentuh_minimum"
+                    android:paddingHorizontal="16dp"
+                    android:text="@string/beranda_tombol_setor_cepat"
+                    android:textSize="13sp"
+                    app:icon="@drawable/ic_setor"
+                    app:iconSize="16dp"
+                    app:iconTint="@color/warna_primer" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

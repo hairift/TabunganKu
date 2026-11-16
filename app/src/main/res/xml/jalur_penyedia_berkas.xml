@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <cache-path name="ekspor_sementara" path="ekspor/" />
+    <files-path name="foto_target" path="foto_target/" />
+    <files-path name="cadangan" path="cadangan/" />
+</paths>

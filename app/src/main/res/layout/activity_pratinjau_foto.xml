@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F1210">
+
+    <ImageView
+        android:id="@+id/gambar_pratinjau_penuh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/label_foto_motivasi"
+        android:scaleType="fitCenter" />
+
+    <LinearLayout
+        android:id="@+id/bilah_atas_pratinjau"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#B30F1210"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/jarak_md">
+
+        <ImageButton
+            android:id="@+id/tombol_tutup_pratinjau"
+            android:layout_width="@dimen/sentuh_minimum"
+            android:layout_height="@dimen/sentuh_minimum"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/tombol_tutup"
+            android:padding="12dp"
+            android:src="@drawable/ic_kembali"
+            app:tint="#FAF7F2" />
+
+        <TextView
+            android:id="@+id/teks_judul_pratinjau"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/jarak_sm"
+            android:layout_weight="1"
+            android:fontFamily="@font/teks_judul"
+            android:textColor="#FAF7F2"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</FrameLayout>

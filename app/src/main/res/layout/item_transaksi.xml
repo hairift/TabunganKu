@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/GayaKartu.Utama"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/jarak_sm">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/jarak_md">
+
+        <ImageView
+            android:id="@+id/ikon_jenis_transaksi"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/latar_status_setor"
+            android:importantForAccessibility="no"
+            android:padding="10dp"
+            android:src="@drawable/ic_setor" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/jarak_md"
+            android:layout_marginEnd="@dimen/jarak_sm"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/teks_judul_transaksi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/plus_jakarta_semibold"
+                android:maxLines="1"
+                android:textColor="@color/warna_teks_utama"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/teks_subjudul_transaksi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/warna_teks_sekunder"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/teks_nominal_transaksi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/plus_jakarta_bold"
+                android:fontFeatureSettings="tnum"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/teks_label_jenis_transaksi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/warna_teks_sekunder"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/tombol_hapus_transaksi"
+            android:layout_width="@dimen/sentuh_minimum"
+            android:layout_height="@dimen/sentuh_minimum"
+            android:layout_marginStart="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/tombol_hapus"
+            android:padding="12dp"
+            android:src="@drawable/ic_hapus"
+            android:visibility="gone"
+            app:tint="@color/warna_teks_sekunder" />
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

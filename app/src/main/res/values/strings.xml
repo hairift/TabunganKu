@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nama_aplikasi">TabunganKu</string>
+    <string name="slogan_aplikasi">Buku tabungan target pribadi dengan foto penyemangat</string>
+
+    <!-- Navigasi bawah -->
+    <string name="nav_beranda">Tabungan</string>
+    <string name="nav_riwayat">Riwayat</string>
+    <string name="nav_laporan">Laporan</string>
+    <string name="nav_pengaturan">Pengaturan</string>
+
+    <!-- Beranda -->
+    <string name="beranda_judul_buku">Buku Tabungan Saya</string>
+    <string name="beranda_label_total_terkumpul">Total Terkumpul</string>
+    <string name="beranda_label_dari_target">dari target %1$s</string>
+    <string name="beranda_label_sisa_keseluruhan">Masih perlu %1$s lagi</string>
+    <string name="beranda_label_jumlah_target">%1$d target aktif · %2$d tercapai</string>
+    <string name="beranda_cari_petunjuk">Cari nama target atau catatan...</string>
+    <string name="beranda_tombol_target_baru">Target Baru</string>
+    <string name="beranda_tombol_setor_cepat">Setor</string>
+
+    <!-- Filter status & kategori -->
+    <string name="filter_semua">Semua</string>
+    <string name="filter_berjalan">Berjalan</string>
+    <string name="filter_tercapai">Tercapai</string>
+    <string name="filter_diarsipkan">Arsip</string>
+
+    <!-- Keadaan UI Beranda (R-27) -->
+    <string name="keadaan_memuat_target">Memuat daftar tabungan dari penyimpanan lokal...</string>
+    <string name="keadaan_kosong_judul">Belum ada target tabungan</string>
+    <string name="keadaan_kosong_isi">Mulai dari satu tujuan nyata, pasang foto impianmu sebagai penyemangat, lalu catat setoran pertama kapan saja.</string>
+    <string name="keadaan_kosong_aksi">Buat Target Pertama</string>
+    <string name="keadaan_kosong_saring_judul">Tidak ada target yang cocok</string>
+    <string name="keadaan_kosong_saring_isi">Ubah kata kunci pencarian atau pilih kategori lain untuk melihat targetmu.</string>
+    <string name="keadaan_kosong_saring_aksi">Tampilkan Semua</string>
+    <string name="keadaan_galat_judul">Data tabungan gagal dimuat</string>
+    <string name="keadaan_galat_aksi">Muat Ulang</string>
+
+    <!-- Form Tambah & Ubah Target -->
+    <string name="judul_tambah_target">Target Tabungan Baru</string>
+    <string name="judul_ubah_target">Ubah Target Tabungan</string>
+    <string name="label_foto_motivasi">Foto Motivasi</string>
+    <string name="petunjuk_foto_motivasi">Tambahkan foto rumah, kendaraan, atau barang impianmu sebagai pengingat tujuan menabung.</string>
+    <string name="tombol_pilih_foto">Pilih Foto</string>
+    <string name="tombol_ganti_foto">Ganti Foto</string>
+    <string name="tombol_hapus_foto">Hapus Foto</string>
+    <string name="label_nama_target">Nama Target</string>
+    <string name="petunjuk_nama_target">Contoh: DP Rumah Minimalis atau Dana Darurat</string>
+    <string name="label_kategori_target">Kategori</string>
+    <string name="label_nominal_target">Nominal Target (Rp)</string>
+    <string name="petunjuk_nominal_target">Contoh: 150000000</string>
+    <string name="label_saldo_awal">Saldo Awal Saat Ini (Rp, opsional)</string>
+    <string name="petunjuk_saldo_awal">Isi 0 jika baru mulai dari awal</string>
+    <string name="label_tanggal_target">Tanggal Target (opsional)</string>
+    <string name="petunjuk_tanggal_belum_dipilih">Belum menentukan batas tanggal</string>
+    <string name="tombol_pilih_tanggal">Pilih Tanggal</string>
+    <string name="tombol_hapus_tanggal">Hapus Tanggal</string>
+    <string name="label_catatan_motivasi">Catatan Penyemangat (opsional)</string>
+    <string name="petunjuk_catatan_motivasi">Tulis alasan kenapa target ini penting untukmu</string>
+    <string name="tombol_simpan_target">Simpan Target</string>
+    <string name="tombol_perbarui_target">Simpan Perubahan</string>
+
+    <!-- Validasi Form -->
+    <string name="galat_nama_wajib">Nama target wajib diisi.</string>
+    <string name="galat_nominal_target_wajib">Nominal target harus lebih besar dari Rp 0.</string>
+    <string name="galat_saldo_awal_negatif">Saldo awal tidak boleh bernilai negatif.</string>
+    <string name="galat_nominal_transaksi_wajib">Nominal transaksi harus lebih dari Rp 0.</string>
+    <string name="galat_saldo_tidak_cukup">Penarikan melebihi saldo yang terkumpul saat ini (%1$s).</string>
+    <string name="galat_foto_gagal_dimuat">Foto tidak dapat diproses. Pilih berkas gambar lain.</string>
+
+    <!-- Detail Target -->
+    <string name="detail_judul_default">Detail Target</string>
+    <string name="detail_tombol_setor">Setor Dana</string>
+    <string name="detail_tombol_tarik">Tarik Dana</string>
+    <string name="detail_label_terkumpul">Terkumpul</string>
+    <string name="detail_label_target">Dari Target</string>
+    <string name="detail_label_sisa">Sisa Target</string>
+    <string name="detail_label_kelebihan">Melebihi target sebesar %1$s</string>
+    <string name="detail_label_estimasi">Rekomendasi Nabung</string>
+    <string name="detail_label_riwayat">Riwayat Setor dan Tarik</string>
+    <string name="detail_riwayat_kosong">Belum ada catatan setoran pada target ini. Ketuk Setor Dana untuk mulai mencatat.</string>
+    <string name="detail_menu_ubah">Ubah Target</string>
+    <string name="detail_menu_arsip">Arsipkan Target</string>
+    <string name="detail_menu_buka_arsip">Aktifkan Kembali</string>
+    <string name="detail_menu_ekspor_excel">Ekspor Target Ini ke Excel (.xlsx)</string>
+    <string name="detail_menu_hapus">Hapus Target</string>
+    <string name="konfirmasi_hapus_target_judul">Hapus target tabungan ini?</string>
+    <string name="konfirmasi_hapus_target_isi">Target \"%1$s\" beserta seluruh riwayat transaksinya akan dihapus permanen dari perangkat ini.</string>
+    <string name="konfirmasi_hapus_transaksi_judul">Hapus catatan transaksi ini?</string>
+    <string name="konfirmasi_hapus_transaksi_isi">Saldo target akan disesuaikan otomatis setelah catatan transaksi ini dihapus.</string>
+    <string name="dialog_target_tercapai_judul">Selamat, Target Tercapai</string>
+    <string name="dialog_target_tercapai_isi">Dana untuk \"%1$s\" telah mencapai %2$s. Kerja keras dan konsistensimu membuahkan hasil.</string>
+    <string name="tombol_tutup">Tutup</string>
+    <string name="tombol_batal">Batal</string>
+    <string name="tombol_hapus">Hapus</string>
+
+    <!-- Lembar Setor / Tarik -->
+    <string name="lembar_judul_setor">Catat Setoran Tabungan</string>
+    <string name="lembar_judul_tarik">Catat Penarikan Dana</string>
+    <string name="lembar_label_nominal">Nominal (Rp)</string>
+    <string name="lembar_label_catatan">Catatan Singkat (opsional)</string>
+    <string name="lembar_petunjuk_catatan">Contoh: Sisihkan gaji atau bonus lembur</string>
+    <string name="lembar_label_tanggal">Tanggal Transaksi</string>
+    <string name="lembar_tombol_simpan_setor">Simpan Setoran</string>
+    <string name="lembar_tombol_simpan_tarik">Simpan Penarikan</string>
+
+    <!-- Tab Riwayat -->
+    <string name="riwayat_judul">Riwayat Transaksi</string>
+    <string name="riwayat_subjudul">Seluruh arus masuk dan penarikan dana pada buku tabunganmu</string>
+    <string name="riwayat_jenis_semua">Semua</string>
+    <string name="riwayat_jenis_setor">Setor</string>
+    <string name="riwayat_jenis_tarik">Tarik</string>
+    <string name="riwayat_kosong_judul">Belum ada aktivitas tabungan</string>
+    <string name="riwayat_kosong_isi">Setiap setoran dan penarikan yang kamu catat akan tampil berurutan di sini.</string>
+    <string name="riwayat_memuat">Memuat catatan transaksi...</string>
+
+    <!-- Tab Laporan & Ekspor -->
+    <string name="laporan_judul">Laporan dan Ekspor</string>
+    <string name="laporan_subjudul">Pantau pola menabung bulanan dan unduh rekap rapi ke Excel atau CSV</string>
+    <string name="laporan_periode_bulan_ini">Bulan Ini</string>
+    <string name="laporan_periode_tiga_bulan">3 Bulan</string>
+    <string name="laporan_periode_semua">Semua Waktu</string>
+    <string name="laporan_label_masuk">Total Setor</string>
+    <string name="laporan_label_keluar">Total Tarik</string>
+    <string name="laporan_label_bersih">Tabungan Bersih</string>
+    <string name="laporan_grafik_bulanan_judul">Berapa total setoranmu tiap bulan dalam 6 bulan terakhir?</string>
+    <string name="laporan_grafik_bulanan_kosong">Catat minimal satu setoran untuk melihat tren bulananmu.</string>
+    <string name="laporan_grafik_sebaran_judul">Bagaimana sebaran dana terkumpul di setiap target?</string>
+    <string name="laporan_grafik_sebaran_kosong">Belum ada saldo terkumpul pada target tabunganmu.</string>
+    <string name="laporan_ekspor_judul">Unduh Rekapitulasi Laporan</string>
+    <string name="laporan_ekspor_keterangan">Berkas Excel (.xlsx) dibuat dengan dua lembar terstruktur (Ringkasan Target dan Riwayat Transaksi), format Rupiah otomatis, serta rumus jumlah.</string>
+    <string name="laporan_cakupan_semua">Semua Target</string>
+    <string name="laporan_cakupan_aktif">Target Aktif Saja</string>
+    <string name="laporan_cakupan_tercapai">Target Tercapai</string>
+    <string name="laporan_tombol_unduh_xlsx">Unduh Excel (.xlsx)</string>
+    <string name="laporan_tombol_unduh_csv">Unduh CSV (.csv)</string>
+    <string name="laporan_status_memproses">Menyiapkan berkas laporan...</string>
+    <string name="laporan_dialog_berhasil_judul">Laporan Siap Digunakan</string>
+    <string name="laporan_dialog_buka">Buka Berkas</string>
+    <string name="laporan_dialog_simpan_lain">Simpan ke Lokasi Lain</string>
+    <string name="laporan_dialog_bagikan">Bagikan</string>
+
+    <!-- Tab Pengaturan & Tentang -->
+    <string name="pengaturan_judul">Pengaturan dan Tentang</string>
+    <string name="pengaturan_tema_judul">Tampilan Warna</string>
+    <string name="pengaturan_tema_deskripsi">Pilih kenyamanan membaca buku tabungan sesuai pencahayaan.</string>
+    <string name="tema_sistem">Ikuti Sistem</string>
+    <string name="tema_terang">Kertas Hangat (Terang)</string>
+    <string name="tema_gelap">Hutan Malam (Gelap)</string>
+    <string name="pengaturan_pengingat_judul">Pengingat Menabung Harian</string>
+    <string name="pengaturan_pengingat_deskripsi">Kirim pengingat lokal harian pukul 20.00 agar kebiasaan menabung terjaga tanpa koneksi internet.</string>
+    <string name="pengaturan_cadangan_judul">Cadangkan dan Pulihkan Data</string>
+    <string name="pengaturan_cadangan_deskripsi">Ekspor seluruh target, transaksi, dan foto motivasi ke satu berkas arsip (.zip) atau pulihkan kembali.</string>
+    <string name="tombol_cadangkan">Buat Cadangan (.zip)</string>
+    <string name="tombol_pulihkan">Pulihkan Cadangan</string>
+    <string name="konfirmasi_pulihkan_judul">Pulihkan data dari cadangan?</string>
+    <string name="konfirmasi_pulihkan_isi">Seluruh target dan transaksi saat ini akan diganti dengan data di dalam berkas cadangan yang dipilih.</string>
+    <string name="pengaturan_tentang_judul">Tentang TabunganKu</string>
+    <string name="pengaturan_versi">Versi %1$s</string>
+    <string name="pengaturan_lisensi_judul">Lisensi Non-Komersial Terbuka</string>
+    <string name="pengaturan_lisensi_isi">TabunganKu 100% gratis, bebas iklan, dan menyimpan seluruh data hanya di perangkatmu. Kode sumber terbuka untuk penggunaan pribadi, pendidikan, serta pengembangan non-komersial dan tidak boleh diperjualbelikan.</string>
+    <string name="pengaturan_repositori">Repositori: github.com/hairift/TabunganKu</string>
+
+    <!-- Deskripsi aksesibilitas (R-39) -->
+    <string name="ket_akses_logo">Logo TabunganKu</string>
+    <string name="ket_akses_kembali">Kembali ke layar sebelumnya</string>
+    <string name="ket_akses_foto_target">Foto motivasi untuk target %1$s</string>
+    <string name="ket_akses_tanpa_foto">Ilustrasi bawaan target %1$s</string>
+    <string name="ket_akses_hapus_transaksi">Hapus transaksi %1$s sebesar %2$s</string>
+</resources>

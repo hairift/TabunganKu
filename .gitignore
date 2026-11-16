@@ -1,0 +1,28 @@
+# Berkas build Gradle & Android
+*.apk
+*.aab
+*.ap_
+*.dex
+.gradle/
+build/
+app/build/
+captures/
+local.properties
+
+# Konfigurasi IDE & Sistem Operasi
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Kunci rilis lokal (jangan unggah rahasia penandatanganan ke repositori)
+keystore/
+*.jks
+*.keystore
+signing.properties
+
+# Berkas sementara
+*.log
+*.tmp
+temp_screenshots/

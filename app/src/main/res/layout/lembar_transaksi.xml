@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/warna_permukaan"
+        android:orientation="vertical"
+        android:padding="@dimen/jarak_xl">
+
+        <TextView
+            android:id="@+id/teks_judul_lembar_transaksi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/teks_judul"
+            android:textColor="@color/warna_teks_utama"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/teks_subjudul_lembar_transaksi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/warna_teks_sekunder"
+            android:textSize="13sp" />
+
+        <!-- Pilihan cepat nominal agar pengguna nyaman mencatat setoran harian -->
+        <HorizontalScrollView
+            android:id="@+id/gulir_nominal_cepat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/jarak_md"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_nominal_50rb"
+                    style="@style/Widget.Material3.Chip.Assist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/sentuh_minimum"
+                    android:text="+Rp 50rb" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_nominal_100rb"
+                    style="@style/Widget.Material3.Chip.Assist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:minHeight="@dimen/sentuh_minimum"
+                    android:text="+Rp 100rb" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_nominal_250rb"
+                    style="@style/Widget.Material3.Chip.Assist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:minHeight="@dimen/sentuh_minimum"
+                    android:text="+Rp 250rb" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_nominal_500rb"
+                    style="@style/Widget.Material3.Chip.Assist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:minHeight="@dimen/sentuh_minimum"
+                    android:text="+Rp 500rb" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_nominal_1jt"
+                    style="@style/Widget.Material3.Chip.Assist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:minHeight="@dimen/sentuh_minimum"
+                    android:text="+Rp 1jt" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/jarak_md"
+            android:fontFamily="@font/plus_jakarta_semibold"
+            android:labelFor="@+id/input_nominal_lembar"
+            android:text="@string/lembar_label_nominal"
+            android:textColor="@color/warna_teks_utama"
+            android:textSize="13sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/wadah_nominal_lembar"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            app:boxBackgroundColor="@color/warna_latar"
+            app:boxCornerRadiusBottomEnd="@dimen/radius_tombol"
+            app:boxCornerRadiusBottomStart="@dimen/radius_tombol"
+            app:boxCornerRadiusTopEnd="@dimen/radius_tombol"
+            app:boxCornerRadiusTopStart="@dimen/radius_tombol"
+            app:boxStrokeColor="@color/warna_garis_batas"
+            app:hintEnabled="false"
+            app:prefixText="Rp ">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_nominal_lembar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFeatureSettings="tnum"
+                android:hint="0"
+                android:inputType="number"
+                android:maxLength="18"
+                android:minHeight="@dimen/sentuh_minimum"
+                android:textColor="@color/warna_teks_utama" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/jarak_md"
+            android:fontFamily="@font/plus_jakarta_semibold"
+            android:text="@string/lembar_label_tanggal"
+            android:textColor="@color/warna_teks_utama"
+            android:textSize="13sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tombol_tanggal_lembar"
+            style="@style/GayaTombol.Garis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="start|center_vertical"
+            app:icon="@drawable/ic_kalender"
+            app:iconTint="@color/warna_primer" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/jarak_md"
+            android:fontFamily="@font/plus_jakarta_semibold"
+            android:labelFor="@+id/input_catatan_lembar"
+            android:text="@string/lembar_label_catatan"
+            android:textColor="@color/warna_teks_utama"
+            android:textSize="13sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            app:boxBackgroundColor="@color/warna_latar"
+            app:boxCornerRadiusBottomEnd="@dimen/radius_tombol"
+            app:boxCornerRadiusBottomStart="@dimen/radius_tombol"
+            app:boxCornerRadiusTopEnd="@dimen/radius_tombol"
+            app:boxCornerRadiusTopStart="@dimen/radius_tombol"
+            app:boxStrokeColor="@color/warna_garis_batas"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_catatan_lembar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/lembar_petunjuk_catatan"
+                android:inputType="textCapSentences"
+                android:maxLength="140"
+                android:minHeight="@dimen/sentuh_minimum"
+                android:textColor="@color/warna_teks_utama" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/jarak_lg"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tombol_batal_lembar"
+                style="@style/GayaTombol.Garis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tombol_batal" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tombol_simpan_lembar"
+                style="@style/GayaTombol.Aksen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/jarak_sm"
+                android:layout_weight="1"
+                android:text="@string/lembar_tombol_simpan_setor" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

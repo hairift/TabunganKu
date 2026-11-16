@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/warna_latar"
+    android:clipToPadding="false"
+    android:paddingBottom="@dimen/jarak_xxl">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/jarak_lg"
+        android:paddingTop="@dimen/jarak_lg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/teks_judul"
+            android:text="@string/laporan_judul"
+            android:textColor="@color/warna_teks_utama"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/laporan_subjudul"
+            android:textColor="@color/warna_teks_sekunder"
+            android:textSize="13sp" />
+
+        <!-- Pemilih periode ringkasan -->
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/grup_chip_periode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/jarak_md"
+            app:chipSpacingHorizontal="@dimen/jarak_sm"
+            app:selectionRequired="true"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_periode_bulan"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:minHeight="@dimen/sentuh_minimum"
+                android:text="@string/laporan_periode_bulan_ini" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_periode_tiga_bulan"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/sentuh_minimum"
+                android:text="@string/laporan_periode_tiga_bulan" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_periode_semua"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/sentuh_minimum"
+                android:text="@string/laporan_periode_semua" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- Ringkasan arus kas nyata -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/GayaKartu.Utama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/jarak_sm">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/jarak_lg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/laporan_label_bersih"
+                    android:textColor="@color/warna_teks_sekunder"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/teks_arus_bersih_laporan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/teks_judul"
+                    android:fontFeatureSettings="tnum"
+                    android:textColor="@color/warna_teks_utama"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/jarak_md"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/jarak_sm"
+                        android:layout_weight="1"
+                        android:background="@drawable/latar_status_setor"
+                        android:orientation="vertical"
+                        android:padding="@dimen/jarak_md">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/laporan_label_masuk"
+                            android:textColor="@color/warna_setor_teks"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/teks_total_setor_laporan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/plus_jakarta_bold"
+                            android:fontFeatureSettings="tnum"
+                            android:textColor="@color/warna_setor_teks"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/latar_status_tarik"
+                        android:orientation="vertical"
+                        android:padding="@dimen/jarak_md">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/laporan_label_keluar"
+                            android:textColor="@color/warna_tarik_teks"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/teks_total_tarik_laporan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/plus_jakarta_bold"
+                            android:fontFeatureSettings="tnum"
+                            android:textColor="@color/warna_tarik_teks"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Grafik 1: Setoran bersih 6 bulan terakhir -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/GayaKartu.Utama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/jarak_md">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/jarak_lg">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/plus_jakarta_semibold"
+                    android:text="@string/laporan_grafik_bulanan_judul"
+                    android:textColor="@color/warna_teks_utama"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/teks_kosong_grafik_bulanan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/jarak_md"
+                    android:text="@string/laporan_grafik_bulanan_kosong"
+                    android:textColor="@color/warna_teks_sekunder"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+                <com.hairift.tabunganku.ui.laporan.GrafikBatangBulananView
+                    android:id="@+id/grafik_batang_bulanan"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="@dimen/jarak_md" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Grafik 2: Sebaran dana tiap target -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/GayaKartu.Utama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/jarak_md">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/jarak_lg">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/plus_jakarta_semibold"
+                    android:text="@string/laporan_grafik_sebaran_judul"
+                    android:textColor="@color/warna_teks_utama"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/teks_kosong_sebaran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/jarak_md"
+                    android:text="@string/laporan_grafik_sebaran_kosong"
+                    android:textColor="@color/warna_teks_sekunder"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/wadah_konten_sebaran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/jarak_md"
+                    android:orientation="vertical">
+
+                    <com.hairift.tabunganku.ui.laporan.GrafikDonutTargetView
+                        android:id="@+id/grafik_donut_target"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_gravity="center_horizontal" />
+
+                    <LinearLayout
+                        android:id="@+id/wadah_legenda_sebaran"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/jarak_md"
+                        android:orientation="vertical" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Pusat Ekspor Excel (.xlsx) dan CSV (.csv) -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/GayaKartu.Utama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/jarak_md">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/jarak_lg">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/teks_judul"
+                    android:text="@string/laporan_ekspor_judul"
+                    android:textColor="@color/warna_teks_utama"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:lineSpacingExtra="2dp"
+                    android:text="@string/laporan_ekspor_keterangan"
+                    android:textColor="@color/warna_teks_sekunder"
+                    android:textSize="13sp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/grup_chip_cakupan_ekspor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/jarak_md"
+                    app:chipSpacingHorizontal="@dimen/jarak_sm"
+                    app:selectionRequired="true"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_cakupan_semua"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:minHeight="@dimen/sentuh_minimum"
+                        android:text="@string/laporan_cakupan_semua" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_cakupan_aktif"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/sentuh_minimum"
+                        android:text="@string/laporan_cakupan_aktif" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_cakupan_tercapai"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/sentuh_minimum"
+                        android:text="@string/laporan_cakupan_tercapai" />
+                </com.google.android.material.chip.ChipGroup>
+
+                <TextView
+                    android:id="@+id/teks_pratinjau_ekspor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/jarak_sm"
+                    android:textColor="@color/warna_teks_sekunder"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:id="@+id/wadah_memuat_ekspor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/jarak_sm"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:indeterminate="true"
+                        app:indicatorColor="@color/warna_primer"
+                        app:indicatorSize="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/jarak_sm"
+                        android:text="@string/laporan_status_memproses"
+                        android:textColor="@color/warna_teks_sekunder"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tombol_unduh_xlsx"
+                    style="@style/GayaTombol.Primer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/jarak_md"
+                    android:text="@string/laporan_tombol_unduh_xlsx"
+                    app:icon="@drawable/ic_unduh"
+                    app:iconTint="@color/warna_teks_di_primer" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tombol_unduh_csv"
+                    style="@style/GayaTombol.Garis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/jarak_sm"
+                    android:text="@string/laporan_tombol_unduh_csv"
+                    app:icon="@drawable/ic_unduh"
+                    app:iconTint="@color/warna_primer" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

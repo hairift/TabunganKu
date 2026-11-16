@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/warna_latar"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/jarak_lg"
+    android:paddingTop="@dimen/jarak_lg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/teks_judul"
+        android:text="@string/riwayat_judul"
+        android:textColor="@color/warna_teks_utama"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/riwayat_subjudul"
+        android:textColor="@color/warna_teks_sekunder"
+        android:textSize="13sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/jarak_md"
+        app:boxBackgroundColor="@color/warna_permukaan"
+        app:boxCornerRadiusBottomEnd="@dimen/radius_tombol"
+        app:boxCornerRadiusBottomStart="@dimen/radius_tombol"
+        app:boxCornerRadiusTopEnd="@dimen/radius_tombol"
+        app:boxCornerRadiusTopStart="@dimen/radius_tombol"
+        app:boxStrokeColor="@color/warna_garis_batas"
+        app:endIconMode="clear_text"
+        app:hintEnabled="false"
+        app:startIconDrawable="@drawable/ic_cari"
+        app:startIconTint="@color/warna_teks_sekunder">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_cari_riwayat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/beranda_cari_petunjuk"
+            android:inputType="text"
+            android:maxLines="1"
+            android:minHeight="@dimen/sentuh_minimum"
+            android:textColor="@color/warna_teks_utama"
+            android:textColorHint="@color/warna_teks_sekunder"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/grup_chip_jenis_riwayat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/jarak_sm"
+        app:chipSpacingHorizontal="@dimen/jarak_sm"
+        app:selectionRequired="true"
+        app:singleLine="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_riwayat_semua"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:minHeight="@dimen/sentuh_minimum"
+            android:text="@string/riwayat_jenis_semua" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_riwayat_setor"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/sentuh_minimum"
+            android:text="@string/riwayat_jenis_setor" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_riwayat_tarik"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/sentuh_minimum"
+            android:text="@string/riwayat_jenis_tarik" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <LinearLayout
+        android:id="@+id/tata_memuat_riwayat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/jarak_xxl"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            app:indicatorColor="@color/warna_primer" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/jarak_sm"
+            android:text="@string/riwayat_memuat"
+            android:textColor="@color/warna_teks_sekunder"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/tata_kosong_riwayat"
+        style="@style/GayaKartu.Utama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/jarak_lg"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/jarak_xl">
+
+            <TextView
+                android:id="@+id/teks_kosong_riwayat_judul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/teks_judul"
+                android:gravity="center"
+                android:text="@string/riwayat_kosong_judul"
+                android:textColor="@color/warna_teks_utama"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/teks_kosong_riwayat_isi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/jarak_sm"
+                android:gravity="center"
+                android:text="@string/riwayat_kosong_isi"
+                android:textColor="@color/warna_teks_sekunder"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/daftar_riwayat_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/jarak_sm"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/jarak_lg" />
+
+</LinearLayout>

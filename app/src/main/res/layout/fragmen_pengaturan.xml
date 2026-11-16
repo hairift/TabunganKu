@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/warna_latar"
+    android:clipToPadding="false"
+    android:paddingBottom="@dimen/jarak_xxl">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/jarak_lg"
+        android:paddingTop="@dimen/jarak_lg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/teks_judul"
+            android:text="@string/pengaturan_judul"
+            android:textColor="@color/warna_teks_utama"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- Pengaturan Tema Terang / Gelap (R-21, R-34) -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/GayaKartu.Utama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/jarak_lg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/jarak_lg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/plus_jakarta_semibold"
+                    android:text="@string/pengaturan_tema_judul"
+                    android:textColor="@color/warna_teks_utama"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/pengaturan_tema_deskripsi"
+                    android:textColor="@color/warna_teks_sekunder"
+                    android:textSize="13sp" />
+
+                <RadioGroup
+                    android:id="@+id/grup_radio_tema"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/jarak_sm">
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radio_tema_sistem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/sentuh_minimum"
+                        android:text="@string/tema_sistem"
+                        android:textColor="@color/warna_teks_utama" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radio_tema_terang"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/sentuh_minimum"
+                        android:text="@string/tema_terang"
+                        android:textColor="@color/warna_teks_utama" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radio_tema_gelap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/sentuh_minimum"
+                        android:text="@string/tema_gelap"
+                        android:textColor="@color/warna_teks_utama" />
+                </RadioGroup>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Pengingat Harian Lokal -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/GayaKartu.Utama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/jarak_md">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/jarak_lg">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/jarak_md"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/plus_jakarta_semibold"
+                        android:text="@string/pengaturan_pengingat_judul"
+                        android:textColor="@color/warna_teks_utama"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/pengaturan_pengingat_deskripsi"
+                        android:textColor="@color/warna_teks_sekunder"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/sakelar_pengingat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/pengaturan_pengingat_judul"
+                    android:minWidth="@dimen/sentuh_minimum"
+                    android:minHeight="@dimen/sentuh_minimum" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Cadangkan & Pulihkan ZIP -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/GayaKartu.Utama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/jarak_md">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/jarak_lg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/plus_jakarta_semibold"
+                    android:text="@string/pengaturan_cadangan_judul"
+                    android:textColor="@color/warna_teks_utama"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/pengaturan_cadangan_deskripsi"
+                    android:textColor="@color/warna_teks_sekunder"
+                    android:textSize="13sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tombol_cadangkan_data"
+                    style="@style/GayaTombol.Primer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/jarak_md"
+                    android:text="@string/tombol_cadangkan" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tombol_pulihkan_data"
+                    style="@style/GayaTombol.Garis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/jarak_sm"
+                    android:text="@string/tombol_pulihkan" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Tentang Aplikasi & Lisensi -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/GayaKartu.Utama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/jarak_md">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/jarak_lg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:contentDescription="@string/ket_akses_logo"
+                        android:src="@drawable/ic_logo_tabunganku" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/jarak_md"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/teks_judul"
+                            android:text="@string/nama_aplikasi"
+                            android:textColor="@color/warna_teks_utama"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/teks_versi_aplikasi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/warna_teks_sekunder"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/jarak_md"
+                    android:fontFamily="@font/plus_jakarta_semibold"
+                    android:text="@string/pengaturan_lisensi_judul"
+                    android:textColor="@color/warna_teks_utama"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:lineSpacingExtra="2dp"
+                    android:text="@string/pengaturan_lisensi_isi"
+                    android:textColor="@color/warna_teks_sekunder"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/jarak_sm"
+                    android:fontFamily="@font/plus_jakarta_medium"
+                    android:text="@string/pengaturan_repositori"
+                    android:textColor="@color/warna_primer"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

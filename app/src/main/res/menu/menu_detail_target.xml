@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/aksi_ubah_target"
+        android:title="@string/detail_menu_ubah" />
+    <item
+        android:id="@+id/aksi_ekspor_target"
+        android:title="@string/detail_menu_ekspor_excel" />
+    <item
+        android:id="@+id/aksi_arsip_target"
+        android:title="@string/detail_menu_arsip" />
+    <item
+        android:id="@+id/aksi_hapus_target"
+        android:title="@string/detail_menu_hapus" />
+</menu>

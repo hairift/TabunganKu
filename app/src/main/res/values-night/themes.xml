@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Tema.TabunganKu" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/warna_primer</item>
+        <item name="colorOnPrimary">@color/warna_teks_di_primer</item>
+        <item name="colorPrimaryContainer">@color/warna_primer_lembut</item>
+        <item name="colorOnPrimaryContainer">@color/warna_teks_utama</item>
+
+        <item name="colorSecondary">@color/warna_aksen</item>
+        <item name="colorOnSecondary">@color/warna_teks_di_aksen</item>
+        <item name="colorSecondaryContainer">@color/warna_permukaan_sekunder</item>
+        <item name="colorOnSecondaryContainer">@color/warna_teks_utama</item>
+
+        <item name="android:colorBackground">@color/warna_latar</item>
+        <item name="colorSurface">@color/warna_permukaan</item>
+        <item name="colorOnSurface">@color/warna_teks_utama</item>
+        <item name="colorSurfaceVariant">@color/warna_permukaan_sekunder</item>
+        <item name="colorOnSurfaceVariant">@color/warna_teks_sekunder</item>
+        <item name="colorOutline">@color/warna_garis_batas</item>
+        <item name="colorOutlineVariant">@color/warna_garis_halus</item>
+        <item name="colorError">@color/warna_galat_teks</item>
+        <item name="colorOnError">@color/warna_galat_latar</item>
+
+        <item name="android:fontFamily">@font/teks_utama</item>
+        <item name="fontFamily">@font/teks_utama</item>
+
+        <item name="android:statusBarColor">@color/warna_latar</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/warna_permukaan</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+</resources>

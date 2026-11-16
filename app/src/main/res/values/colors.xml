@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Palet Mode Terang: Kertas Buku Tabungan -->
+    <color name="warna_latar">#F7F3EB</color>
+    <color name="warna_permukaan">#FFFDF9</color>
+    <color name="warna_permukaan_sekunder">#EFE8DA</color>
+    <color name="warna_garis_batas">#8E8577</color>
+    <color name="warna_garis_halus">#E3DACB</color>
+
+    <color name="warna_teks_utama">#1F2421</color>
+    <color name="warna_teks_sekunder">#505752</color>
+
+    <color name="warna_primer">#1E4D3B</color>
+    <color name="warna_primer_lembut">#DCE9E2</color>
+    <color name="warna_teks_di_primer">#FAF7F2</color>
+
+    <!-- Aksen tunggal terakota panggang untuk aksi utama dan sorotan penting -->
+    <color name="warna_aksen">#A94E2D</color>
+    <color name="warna_teks_di_aksen">#FFFDF9</color>
+
+    <!-- Warna status yang selalu disertai label teks dan ikon -->
+    <color name="warna_setor_latar">#E5F0EA</color>
+    <color name="warna_setor_teks">#1B4B37</color>
+    <color name="warna_tarik_latar">#FAEBE4</color>
+    <color name="warna_tarik_teks">#8D3618</color>
+    <color name="warna_galat_latar">#FBEAEA</color>
+    <color name="warna_galat_teks">#8E2223</color>
+
+    <!-- Warna tetap merek & perlindungan keterbacaan di atas foto -->
+    <color name="warna_logo_hijau">#1E4D3B</color>
+    <color name="warna_logo_terakota">#E08663</color>
+    <color name="warna_logo_krem">#FAF7F2</color>
+    <color name="warna_scrim_gelap">#D918201C</color>
+    <color name="warna_teks_di_scrim">#FAF7F2</color>
+
+    <!-- Kartu hero Beranda dengan kontras tinggi -->
+    <color name="warna_kartu_hero_latar">#1E4D3B</color>
+    <color name="warna_kartu_hero_teks">#FAF7F2</color>
+    <color name="warna_kartu_hero_sekunder">#D3E3DA</color>
+    <color name="warna_kartu_hero_jalur">#2F6852</color>
+    <color name="warna_kartu_hero_isi">#E08663</color>
+
+    <!-- Palet grafik sebaran target (kontras >= 3:1 terhadap permukaan kartu) -->
+    <color name="warna_grafik_1">#1E4D3B</color>
+    <color name="warna_grafik_2">#A94E2D</color>
+    <color name="warna_grafik_3">#3E6F8C</color>
+    <color name="warna_grafik_4">#7A6833</color>
+    <color name="warna_grafik_5">#5C527A</color>
+    <color name="warna_grafik_6">#4E6151</color>
+</resources>

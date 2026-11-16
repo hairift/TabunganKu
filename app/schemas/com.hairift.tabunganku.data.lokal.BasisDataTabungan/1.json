@@ -1,0 +1,181 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "321db58d758f3ae30749c35dabd598cc",
+    "entities": [
+      {
+        "tableName": "target_tabungan",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nama_target` TEXT NOT NULL, `kategori` TEXT NOT NULL, `nominal_target` INTEGER NOT NULL, `saldo_terkumpul` INTEGER NOT NULL, `path_foto_motivasi` TEXT, `catatan_motivasi` TEXT, `tanggal_target_epoch` INTEGER NOT NULL, `diarsipkan` INTEGER NOT NULL, `dibuat_pada_epoch` INTEGER NOT NULL, `diperbarui_pada_epoch` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "namaTarget",
+            "columnName": "nama_target",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kategori",
+            "columnName": "kategori",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nominalTarget",
+            "columnName": "nominal_target",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "saldoTerkumpul",
+            "columnName": "saldo_terkumpul",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pathFotoMotivasi",
+            "columnName": "path_foto_motivasi",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "catatanMotivasi",
+            "columnName": "catatan_motivasi",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tanggalTargetEpoch",
+            "columnName": "tanggal_target_epoch",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "diarsipkan",
+            "columnName": "diarsipkan",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dibuatPadaEpoch",
+            "columnName": "dibuat_pada_epoch",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "diperbaruiPadaEpoch",
+            "columnName": "diperbarui_pada_epoch",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "transaksi_tabungan",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `id_target` INTEGER NOT NULL, `jenis` TEXT NOT NULL, `nominal` INTEGER NOT NULL, `catatan` TEXT, `tanggal_transaksi_epoch` INTEGER NOT NULL, `dibuat_pada_epoch` INTEGER NOT NULL, FOREIGN KEY(`id_target`) REFERENCES `target_tabungan`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idTarget",
+            "columnName": "id_target",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "jenis",
+            "columnName": "jenis",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nominal",
+            "columnName": "nominal",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "catatan",
+            "columnName": "catatan",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tanggalTransaksiEpoch",
+            "columnName": "tanggal_transaksi_epoch",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dibuatPadaEpoch",
+            "columnName": "dibuat_pada_epoch",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_transaksi_tabungan_id_target",
+            "unique": false,
+            "columnNames": [
+              "id_target"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_transaksi_tabungan_id_target` ON `${TABLE_NAME}` (`id_target`)"
+          },
+          {
+            "name": "index_transaksi_tabungan_tanggal_transaksi_epoch",
+            "unique": false,
+            "columnNames": [
+              "tanggal_transaksi_epoch"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_transaksi_tabungan_tanggal_transaksi_epoch` ON `${TABLE_NAME}` (`tanggal_transaksi_epoch`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "target_tabungan",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "id_target"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '321db58d758f3ae30749c35dabd598cc')"
+    ]
+  }
+}

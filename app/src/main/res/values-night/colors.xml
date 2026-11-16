@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Palet Mode Gelap: Hutan Malam -->
+    <color name="warna_latar">#141816</color>
+    <color name="warna_permukaan">#1D2320</color>
+    <color name="warna_permukaan_sekunder">#262E2A</color>
+    <color name="warna_garis_batas">#747F76</color>
+    <color name="warna_garis_halus">#2E3732</color>
+
+    <color name="warna_teks_utama">#F2EDE4</color>
+    <color name="warna_teks_sekunder">#B5BEB7</color>
+
+    <color name="warna_primer">#6CA88C</color>
+    <color name="warna_primer_lembut">#23392E</color>
+    <color name="warna_teks_di_primer">#101714</color>
+
+    <color name="warna_aksen">#DE8361</color>
+    <color name="warna_teks_di_aksen">#1A110E</color>
+
+    <color name="warna_setor_latar">#1E3328</color>
+    <color name="warna_setor_teks">#8AD1AC</color>
+    <color name="warna_tarik_latar">#362019</color>
+    <color name="warna_tarik_teks">#F1A78C</color>
+    <color name="warna_galat_latar">#3B1A1B</color>
+    <color name="warna_galat_teks">#F5A3A4</color>
+
+    <color name="warna_scrim_gelap">#E0121614</color>
+    <color name="warna_teks_di_scrim">#FAF7F2</color>
+
+    <!-- Kartu hero Beranda mode gelap -->
+    <color name="warna_kartu_hero_latar">#1D2C24</color>
+    <color name="warna_kartu_hero_teks">#F2EDE4</color>
+    <color name="warna_kartu_hero_sekunder">#B5BEB7</color>
+    <color name="warna_kartu_hero_jalur">#2E4237</color>
+    <color name="warna_kartu_hero_isi">#DE8361</color>
+
+    <color name="warna_grafik_1">#6CA88C</color>
+    <color name="warna_grafik_2">#DE8361</color>
+    <color name="warna_grafik_3">#77ADC9</color>
+    <color name="warna_grafik_4">#C7AF6B</color>
+    <color name="warna_grafik_5">#A69BC9</color>
+    <color name="warna_grafik_6">#8FA893</color>
+</resources>

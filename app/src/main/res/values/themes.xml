@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Tema.TabunganKu" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/warna_primer</item>
+        <item name="colorOnPrimary">@color/warna_teks_di_primer</item>
+        <item name="colorPrimaryContainer">@color/warna_primer_lembut</item>
+        <item name="colorOnPrimaryContainer">@color/warna_teks_utama</item>
+
+        <item name="colorSecondary">@color/warna_aksen</item>
+        <item name="colorOnSecondary">@color/warna_teks_di_aksen</item>
+        <item name="colorSecondaryContainer">@color/warna_permukaan_sekunder</item>
+        <item name="colorOnSecondaryContainer">@color/warna_teks_utama</item>
+
+        <item name="android:colorBackground">@color/warna_latar</item>
+        <item name="colorSurface">@color/warna_permukaan</item>
+        <item name="colorOnSurface">@color/warna_teks_utama</item>
+        <item name="colorSurfaceVariant">@color/warna_permukaan_sekunder</item>
+        <item name="colorOnSurfaceVariant">@color/warna_teks_sekunder</item>
+        <item name="colorOutline">@color/warna_garis_batas</item>
+        <item name="colorOutlineVariant">@color/warna_garis_halus</item>
+        <item name="colorError">@color/warna_galat_teks</item>
+        <item name="colorOnError">@color/warna_galat_latar</item>
+
+        <item name="android:fontFamily">@font/teks_utama</item>
+        <item name="fontFamily">@font/teks_utama</item>
+
+        <item name="android:statusBarColor">@color/warna_latar</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/warna_permukaan</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+
+    <style name="Tema.TabunganKu.GelapFoto" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:colorBackground">#0F1210</item>
+        <item name="android:statusBarColor">#0F1210</item>
+        <item name="android:navigationBarColor">#0F1210</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+
+    <style name="GayaTeks.JudulBesar" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:fontFamily">@font/teks_judul</item>
+        <item name="fontFamily">@font/teks_judul</item>
+        <item name="android:textColor">@color/warna_teks_utama</item>
+    </style>
+
+    <style name="GayaTeks.JudulKartu" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:fontFamily">@font/teks_judul</item>
+        <item name="fontFamily">@font/teks_judul</item>
+        <item name="android:textColor">@color/warna_teks_utama</item>
+    </style>
+
+    <style name="GayaTeks.AngkaTabular" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:fontFamily">@font/teks_utama</item>
+        <item name="fontFamily">@font/teks_utama</item>
+        <item name="android:fontFeatureSettings">tnum</item>
+    </style>
+
+    <style name="GayaKartu.Utama" parent="Widget.Material3.CardView.Outlined">
+        <item name="cardBackgroundColor">@color/warna_permukaan</item>
+        <item name="strokeColor">@color/warna_garis_halus</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cardCornerRadius">@dimen/radius_kartu</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+
+    <style name="GayaTombol.Aksen" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/warna_aksen</item>
+        <item name="android:textColor">@color/warna_teks_di_aksen</item>
+        <item name="cornerRadius">@dimen/radius_tombol</item>
+        <item name="android:minHeight">@dimen/sentuh_minimum</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/plus_jakarta_semibold</item>
+    </style>
+
+    <style name="GayaTombol.Primer" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/warna_primer</item>
+        <item name="android:textColor">@color/warna_teks_di_primer</item>
+        <item name="cornerRadius">@dimen/radius_tombol</item>
+        <item name="android:minHeight">@dimen/sentuh_minimum</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/plus_jakarta_semibold</item>
+    </style>
+
+    <style name="GayaTombol.Garis" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/warna_garis_batas</item>
+        <item name="android:textColor">@color/warna_teks_utama</item>
+        <item name="cornerRadius">@dimen/radius_tombol</item>
+        <item name="android:minHeight">@dimen/sentuh_minimum</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/plus_jakarta_semibold</item>
+    </style>
+</resources>
